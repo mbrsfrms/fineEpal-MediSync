@@ -1,1 +1,1 @@
-# beeLight-MediSync
+# fineEpal-MediSync
