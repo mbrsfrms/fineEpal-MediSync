@@ -17,7 +17,7 @@
 
 ---
 
-<h2>✦ Overview</h2>
+<h2>℞☤ Overview</h2>
 
 **MediSync** is a Java-based medication monitoring and management application designed to provide users with a centralized and organized platform for managing their medication needs. It aims to simplify the process of keeping track of multiple medications by allowing users to record essential medication information, organize dosage schedules, monitor actual medication intake, maintain intake history, and track remaining medicine supplies.
 
@@ -29,7 +29,7 @@ By integrating medication management, scheduling, intake tracking, supply monito
 
 ---
 
-<h2>✦ Key Features</h2>
+<h2>℞☤ Key Features</h2>
 
 - 💊 **Medication Management** – Allows users to record, organize, and manage essential medication information.
 - 🕒 **Medication Scheduling** – Helps users organize dosage schedules and medication routines.
@@ -41,7 +41,7 @@ By integrating medication management, scheduling, intake tracking, supply monito
 
 ---
 
-<h2>✦ Technologies Used</h2>
+<h2>℞☤ Technologies Used</h2>
 
 - **Java** – Primary programming language
 - **Object-Oriented Programming (OOP)** – Application structure and implementation
@@ -49,7 +49,7 @@ By integrating medication management, scheduling, intake tracking, supply monito
 - **XML** – User interface layout and design
 ---
 
-<h2>✦ Project Structure</h2>
+<h2>℞☤ Project Structure</h2>
 
 ```text
 MediSync/
@@ -70,7 +70,7 @@ MediSync/
 └── README.md
 ```
 
-<h3>Core Classes</h3>
+<h3>℞☤ Core Classes</h3>
 
 | Class | Responsibility |
 | :--- | :--- |
@@ -83,7 +83,7 @@ MediSync/
 
 ---
 
-<h2>✦ Object-Oriented Programming Concepts</h2>
+<h2>℞☤ Object-Oriented Programming Concepts</h2>
 
 MediSync applies Object-Oriented Programming principles and Java features to organize its components, ensure a modular application structure, and handle data efficiently.
 
@@ -97,7 +97,7 @@ MediSync applies Object-Oriented Programming principles and Java features to org
 - **Arrays/Data Handling:** Arrays or appropriate data structures will be used to store, organize, and manage collections of medications, schedules, intake records, and other related system information.
 ---
 
-<h2>✦ Application Screenshots</h2>
+<h2>℞☤ Application Screenshots</h2>
 
 <p align="center">
   <img src="assets/medisync-dashboard.png" alt="MediSync Dashboard" width="85%">
@@ -119,7 +119,7 @@ MediSync applies Object-Oriented Programming principles and Java features to org
 
 ---
 
-<h2>✦ Getting Started</h2>
+<h2>℞☤ Getting Started</h2>
 
 <h3>Prerequisites</h3>
 
@@ -145,7 +145,7 @@ git clone https://github.com/fineEpal/MediSync.git
 
 ---
 
-<h2>✦ Project Objectives</h2>
+<h2>℞☤ Project Objectives</h2>
 
 MediSync aims to:
 
@@ -158,7 +158,7 @@ MediSync aims to:
 
 ---
 
-<h2>✦ Project Limitations</h2>
+<h2>℞☤ Project Limitations</h2>
 
 MediSync is intended for medication organization and monitoring purposes only. It does not provide medical diagnoses, prescribe medications, recommend treatments, or replace professional medical advice.
 
@@ -166,7 +166,7 @@ The accuracy of the information and records depends on the details entered by us
 
 ---
 
-<h2>✦ Developed By</h2>
+<h2>℞☤ Developed By</h2>
 
 <p align="center">
   <img src="assets/seanjerseyalbo.png" alt="Sean Jersey A. Albo" width="125" height="150">
@@ -198,7 +198,7 @@ The accuracy of the information and records depends on the details entered by us
 
 ---
 
-<h2>✦ Sustainable Development Goal</h2>
+<h2>℞☤ Sustainable Development Goal</h2>
 
 <p align="center">
   <img src="assets/sdg3.png" alt="United Nations SDG 3: Good Health and Well-Being" width="180">
