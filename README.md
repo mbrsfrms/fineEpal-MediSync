@@ -47,7 +47,7 @@
     <td align="center" width="25%">
       <img src="https://img.icons8.com/color/96/elderly-person.png" width="65" alt="Elderly" /><br>
       <b>Elderly Individuals</b><br>
-      <sub>Senior dependents whose medication accounts and daily routines are handled and monitored by family caregivers or guardians.</sub>
+      <sub>Senior dependents whose medication accounts are handled and monitored by guardians.</sub>
     </td>
   </tr>
 </table>
@@ -234,10 +234,10 @@ The accuracy of the information and records depends on the details entered by us
 - 📋 Helping individuals and caregivers become more organized in monitoring medication intake
 ---
 
+<h3 align="center">MEDISYNC</h3>
+
 <p align="center">
-  <h1>MEDISYNC</h1>
-  <br>
- <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
 </p>
 
 
