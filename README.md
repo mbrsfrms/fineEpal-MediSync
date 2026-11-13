@@ -1,5 +1,5 @@
 # fineEpal-MediSync
- <p align="center">
+<p align="center">
   <img src="assets/medisync-banner.jpg" alt="MediSync Banner" width="100%">
 </p>
 
@@ -8,7 +8,7 @@
 <h3 align="center">Medication Monitoring and Management System</h3>
 
 <p align="center">
-  <i>Your medications, On track.</i>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -210,11 +210,13 @@ MediSync contributes to **Sustainable Development Goal 3** by promoting responsi
 
 ---
 
-<p align="center">
+<h1 align="center">
   <b>MEDISYNC</b>
   <br>
-  <i>Your medications, On track.</i>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
 </p>
+</h1>
 
 
 [Java.js]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
