@@ -43,10 +43,10 @@ By integrating medication management, scheduling, intake tracking, supply monito
 
 <h2>℞☤ Technologies Used</h2>
 
-- **Java** – Primary programming language
-- **Object-Oriented Programming (OOP)** – Application structure and implementation
-- **Android Studio** – Integrated Development Environment (IDE)
-- **XML** – User interface layout and design
+- [![Java][Java.js]][Java-url]
+- [![OOP][OOP.js]][OOP-url]
+- [![Android Studio][AndroidStudio.js]][AndroidStudio-url]
+- [![XML][XML.js]][XML-url]
 ---
 
 <h2>℞☤ Project Structure</h2>
@@ -215,3 +215,16 @@ MediSync contributes to **Sustainable Development Goal 3** by promoting responsi
   <br>
   <i>Your medications, On track.</i>
 </p>
+
+
+[Java.js]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
+[Java-url]: https://www.java.com/
+
+[OOP.js]: https://img.shields.io/badge/OOP-6F42C1?style=for-the-badge&logo=codeforces&logoColor=white
+[OOP-url]: https://en.wikipedia.org/wiki/Object-oriented_programming
+
+[AndroidStudio.js]: https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white
+[AndroidStudio-url]: https://developer.android.com/studio
+
+[XML.js]: https://img.shields.io/badge/XML-005FAD?style=for-the-badge&logo=xml&logoColor=white
+[XML-url]: https://www.w3.org/XML/
