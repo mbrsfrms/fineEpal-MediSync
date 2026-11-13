@@ -1,5 +1,5 @@
 # fineEpal-MediSync
-<p align="center">
+ <p align="center">
   <img src="assets/medisync-banner.jpg" alt="MediSync Banner" width="100%">
 </p>
 
@@ -8,7 +8,7 @@
 <h3 align="center">Medication Monitoring and Management System</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
+ <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -17,15 +17,40 @@
 
 ---
 
-<h2>℞☤ Overview</h2>
+#<h2>℞☤ Overview </h2>
 
-**MediSync** is a Java-based medication monitoring and management application designed to provide users with a centralized and organized platform for managing their medication needs. It aims to simplify the process of keeping track of multiple medications by allowing users to record essential medication information, organize dosage schedules, monitor actual medication intake, maintain intake history, and track remaining medicine supplies.
+**MediSync** is a Java-based medication monitoring and management application designed to provide users with a centralized and organized platform for managing their medication needs. It aims to simplify keeping track of multiple medications by allowing users to:
+- 📝 **Record** essential medication information
+- ⏰ **Organize** dosage schedules and receive timely reminders
+- ✅ **Monitor** actual medication intake and maintain intake history
+- 💊 **Track** remaining medicine supplies for timely replenishment
 
-The system addresses common challenges associated with medication management, such as forgetting scheduled doses, keeping track of different medication schedules, monitoring missed or skipped intake, and determining when medicine supplies need replenishment. Through its integrated features, MediSync enables users to manage medication routines more efficiently, receive timely reminders, monitor medication adherence, and keep important health-related information accessible in one place.
+### 👥 Who Can Use MediSync?
 
-MediSync is designed not only for individuals managing their own medications but also for **parents, guardians, and family caregivers responsible for managing the medications of their dependents**. Users can choose to manage their personal medication records or oversee the medication routines of others, including children aged 10 years old and below and elderly individuals who require assistance.
-
-By integrating medication management, scheduling, intake tracking, supply monitoring, and appointment reminders, MediSync promotes a more systematic approach to medication monitoring and encourages consistency in health-related routines.
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/user-male-circle--v1.png" width="65" alt="Individuals" /><br>
+      <b>Individuals</b><br>
+      <sub>Self-managing personal medication schedules, intake history, and medicine supplies.</sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/family--v1.png" width="65" alt="Parents and Guardians" /><br>
+      <b>Parents & Guardians</b><br>
+      <sub>Family caregivers organizing and overseeing medication routines for their dependents.</sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/children.png" width="65" alt="Children" /><br>
+      <b>Children (10 & Below)</b><br>
+      <sub>Young dependents whose dosages and schedules are closely monitored by guardians.</sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/elderly-person.png" width="65" alt="Elderly" /><br>
+      <b>Elderly Individuals</b><br>
+      <sub>Senior dependents whose medication accounts and daily routines are handled and monitored by family caregivers or guardians.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -200,26 +225,23 @@ The accuracy of the information and records depends on the details entered by us
 
 <h2>℞☤ Sustainable Development Goal</h2>
 
-<p align="center">
-  <img src="assets/sdg3.png" alt="United Nations SDG 3: Good Health and Well-Being" width="180">
-</p>
 
-<h3 align="center">SDG 3: Good Health and Well-Being</h3>
+[![SDG 3](https://img.shields.io/badge/SDG_3-Good_Health_and_Well--Being-4C9F38?style=for-the-badge&logo=heart&logoColor=white)](https://sdgs.un.org/goals/goal3)
 
-MediSync contributes to **Sustainable Development Goal 3** by promoting responsible medication management, supporting consistent health-related routines, and helping individuals and caregivers become more organized in monitoring medication intake.
-
+**MediSync** contributes to **Sustainable Development Goal 3 (Good Health and Well-Being)** by:
+- 💊 Promoting responsible medication management
+- ⏰ Supporting consistent health-related routines
+- 📋 Helping individuals and caregivers become more organized in monitoring medication intake
 ---
 
-<h1 align="center">
-  <b>MEDISYNC</b>
-  <br>
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
+  <h1>MEDISYNC</h1>
+  <br>
+ <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=450&lines=Your+medications%2C+On+track." alt="Typing SVG" />
 </p>
-</h1>
 
 
-[Java.js]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
+[Java.js]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik04Ljg1MSAxOC41NjlzLS45MTcuNTM0LjY1My43MWMxLjkwMi4yMTYgMi44NzcuMTg1IDQuOTc1LS4yMTIgMCAwIC41NTIuMzQ2IDEuMzIxLjY0NC00LjcgMi4wMTQtMTAuNjM2LS4xMTctNi45NDktLjY0MnpNOC4yNzYgMTUuOTNzLTEuMDI5Ljc2Mi41NDMuOTI0YzIuMDMyLjIxIDMuNjM2LjIyNyA2LjQxMi0uMzA4IDAgMCAuMzg0LjM4OS45ODcuNjAxLTUuNjg0IDEuNjYxLTEyLjAxNi4xMy03Ljk0Mi0uNzE3ek0xMy4xMTYgMTEuNDc1YzEuMTU4IDEuMzMzLS4zMDQgMi41MzMtLjMwNCAyLjUzM3MyLjkzOS0xLjUxOCAxLjU4OS0zLjQxOGMtMS4yNTktMS43Ny0yLjIyNC0yLjY1IDMuMDAyLTUuNjgxIDAgMC04LjIwMSAyLjA0OC00LjI4NyA2LjU2NnpNMTkuMzMxIDIwLjUzMXMwIC42NzktLjc4NyAxLjE5N2MtMS40OTYuNTctNi4yMjggMS4yODEtNy41NDMuMDM1LS4yNzQtLjI1OS41NTYtLjYxMi41NTYtLjYxMi0zLjM2Ny43MjktNy4wNjkuOTIxLTguMjc0LjI2NS0uNDM1LS4yMzYuNDMtLjU2My43MTktLjYyOC0uMjcyLjA1OC0uNTkxLjEzMS0uNTkxLjEzMS0yLjEzNS4zMzYtMS4zNDMgMS4zOTQuMzgxIDEuNjI3IDMuNjM4LjQyNSA5LjMzNC4xOSAxMi40ODktLjUyMyAwIDAgLjM2NC4yMzEuODc2LjM1NnptLTkuOTQtNy42NThjLTIuOTY4LS42NzIgMS41NTktMi44NDMgMS41NTktMi44NDMtMi42MjcuMTItNC43NDQgMS41MTYtMy43MjYgMi43MTcgMS4wMjcgMS4yMSAxLjgzNCAxLjE1NSAxLjgzNCAxLjE1NXMtLjkyNC0uMzU3LjMzMy0xLjAyOXptNi4xNjMgNC4zMDhjMi4xMTYtMS4zNjcgMS4xMzctMi42OTkuMjgyLTMuMzAzLS4yMDMtLjE0MS0uNDktLjI3NC0uNDktLjI3NHMuMjA1LjMyMi4xMDIuNjg3Yy0uMjg2Ljk5OC0xLjQ3MSAxLjM1OS0xLjQ3MSAxLjM1OXMuNzYuMzY3IDEuNTc3LjUzMXpNMTUuMDQxIDIuMHMxLjU1NSAxLjU1Ni0xLjQ3NSAzLjk0OWMtMi40MjkgMS45MTktLjU1NCAzLjAxNC0uMDAxIDQuMjY0LTEuNDE5LTEuMjgxLTIuNDYxLTIuNDA4LTEuNzYyLTMuNDU3IDEuMDI3LTEuNTQgMy44NzMtMi4yODUgMy4yMzgtNC43NTZ6Ii8+PC9zdmc+&logoColor=white
 [Java-url]: https://www.java.com/
 
 [OOP.js]: https://img.shields.io/badge/OOP-6F42C1?style=for-the-badge&logo=codeforces&logoColor=white
@@ -230,3 +252,5 @@ MediSync contributes to **Sustainable Development Goal 3** by promoting responsi
 
 [XML.js]: https://img.shields.io/badge/XML-005FAD?style=for-the-badge&logo=xml&logoColor=white
 [XML-url]: https://www.w3.org/XML/
+
+
