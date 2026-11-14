@@ -83,7 +83,7 @@ MediSync/
 │   ├── medisync-banner.png
 │   ├── sharmilaroa.jpg
 │   ├── amber.jpg
-│   ├── sean.jpg
+│   ├── seanjerseyalbo.png
 │   ├── medisync-dashboard.png
 │   ├── medisync-medications.png
 │   ├── medisync-schedule.png
