@@ -45,6 +45,5 @@ public interface AccountStore {
      *  Returns false if it was not updated. */
     boolean linkUid(long id, String uid);
 
-    /** Updates the stored email. Returns false if another account already uses it. */
     boolean updateEmail(long id, String email);
 }
