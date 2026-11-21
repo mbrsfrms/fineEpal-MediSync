@@ -40,7 +40,6 @@ public interface AccountStore {
     void updatePasswordHash(long id, String passwordHash);
 
     /** Links an existing account that has no UID yet to a Firebase UID and removes its password, so the verified Google owner takes over.
-     *  Returns false if it was not updated. */
     boolean linkUid(long id, String uid);
 
     boolean updateEmail(long id, String email);
