@@ -27,7 +27,6 @@ public interface AccountStore {
         }
     }
 
-    /** Returns the account linked to this Firebase UID, or null. */
     StoredAccount findByUid(String uid);
 
     /** Returns the account with this (lower-case) email, or null. */
