@@ -29,7 +29,6 @@ public interface AccountStore {
 
     StoredAccount findByUid(String uid);
 
-    /** Returns the account with this (lower-case) email, or null. */
     StoredAccount findByEmail(String email);
 
     /** Inserts a new account linked to the UID and returns its id, or -1 on failure. Email must be lower case. */
