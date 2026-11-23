@@ -8,7 +8,6 @@ import com.medisync.app.model.*;
 import com.medisync.app.util.Keys;
 import java.util.List;
 
-/** Starting and restoring signed-in sessions. */
 abstract class SessionRestore extends SplashScreen {
     void startSession(User u) {
         userId = u.getId(); userName = u.getName(); userEmail = u.getEmail();
