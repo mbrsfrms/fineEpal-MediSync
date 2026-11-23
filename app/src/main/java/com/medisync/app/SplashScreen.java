@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/** Splash screen and shared auth screen pieces. */
 abstract class SplashScreen extends Navigation {
     void splash() {
         FrameLayout f = new FrameLayout(this);
