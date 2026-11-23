@@ -1,0 +1,7 @@
+/build
+/local.properties
+/.gradle
+/.idea
+app/build
+# Firebase project configuration is per-developer; do not commit it
+app/google-services.json
