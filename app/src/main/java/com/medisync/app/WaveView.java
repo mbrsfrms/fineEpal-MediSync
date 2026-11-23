@@ -6,7 +6,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.View;
 
-/** Decorative wave header. */
 class WaveView extends View {
     final Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
 
