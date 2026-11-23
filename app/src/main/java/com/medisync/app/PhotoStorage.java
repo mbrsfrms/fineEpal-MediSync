@@ -10,8 +10,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-/** Saving and deleting profile photo files. */
-abstract class PhotoStorage extends DoseLogic {
+abstract class 2PhotoStorage extends DoseLogic {
     /** Copies the chosen picture into the app's private storage as a small square JPEG. */
     String savePhoto(Uri uri) {
         try {
