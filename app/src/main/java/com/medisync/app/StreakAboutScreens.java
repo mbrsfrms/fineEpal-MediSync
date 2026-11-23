@@ -12,7 +12,6 @@ import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Locale;
 
-/** Streak details and About screens. */
 abstract class StreakAboutScreens extends ReminderSettings {
     void streak() {
         LinearLayout b = page();
