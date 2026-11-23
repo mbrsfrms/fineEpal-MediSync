@@ -13,7 +13,6 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Locale;
 
-/** Form widgets: labels, text inputs, selects, date selects and switches. */
 abstract class UiInputs extends UiBasics {
     TextView lbl(LinearLayout p, String s) {
         TextView t = tv(s, 11, MUTED, false);
