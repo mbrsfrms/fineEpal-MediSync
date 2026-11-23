@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.medisync.app.model.*;
 
-/** Basic view factories: sizes, rounded boxes, text, rows, cards, buttons and the page frame. */
 abstract class UiBasics extends FormatHelpers {
     int dp(float v) { return (int) (v * getResources().getDisplayMetrics().density + .5f); }
 
