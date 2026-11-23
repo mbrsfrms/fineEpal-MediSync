@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-/** Dialog helpers: generic dialog, list dialog and confirm dialog. */
 abstract class UiDialogs extends UiInputs {
     AlertDialog dialog(String title, View body, String pos, final Act onPos, String neg) {
         LinearLayout box = col();
