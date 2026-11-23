@@ -8,7 +8,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 import com.medisync.app.model.*;
 
-/** Reminder and notification settings screens. */
 abstract class ReminderSettings extends DependentScreens {
     void remRow(LinearLayout parent, final long pid, String icon, String title, final String key, boolean def) {
         LinearLayout r = row();
