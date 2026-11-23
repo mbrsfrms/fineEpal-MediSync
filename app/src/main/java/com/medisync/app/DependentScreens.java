@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/** Dependents, upcoming doses and supply screens. */
 abstract class DependentScreens extends PatientScreen {
     void dependents() {
         LinearLayout b = page();
