@@ -12,7 +12,6 @@ import com.medisync.app.model.Medication;
 import com.medisync.app.util.DateUtils;
 import java.util.List;
 
-/** Calendar day cells, legend and event rows. */
 final class CalendarCells {
     private CalendarCells() { }
 
