@@ -11,7 +11,7 @@ import android.view.View;
 import java.io.File;
 import java.util.HashMap;
 
-/** Avatar: a saved photo or a drawn animal/person icon. */
+
 class AvatarView extends View {
     static final HashMap<String, Bitmap> CACHE = new HashMap<>();
     final String avatar;
