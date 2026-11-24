@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.medisync.app.manager.AuthManager;
 import com.medisync.app.manager.Validator;
 
-/** Personal details and password screens. */
+
 abstract class AccountScreens extends MoreScreen {
     void personal() {
         LinearLayout b = page();
