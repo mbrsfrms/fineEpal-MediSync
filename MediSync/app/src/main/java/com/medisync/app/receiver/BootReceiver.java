@@ -6,7 +6,6 @@ import android.content.Intent;
 
 import com.medisync.app.manager.AlarmScheduler;
 
-/** Restores alarms after a reboot, app update, or a change of time or timezone. */
 public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
