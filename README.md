@@ -202,16 +202,20 @@ The accuracy of the information and records depends on the details entered by us
 </p>
 
 ---
-
 <h2>℞☤ Sustainable Development Goal</h2>
 
-
-[![SDG 3](https://img.shields.io/badge/SDG_3-Good_Health_and_Well--Being-4C9F38?style=for-the-badge&logo=heart&logoColor=white)](https://sdgs.un.org/goals/goal3)
+<p align="center">
+  <a href="https://sdgs.un.org/goals/goal3">
+    <img src="https://img.shields.io/badge/SDG_3-Good_Health-4C9F38?style=for-the-badge" alt="SDG 3">
+  </a>
+</p>
 
 **MediSync** contributes to **Sustainable Development Goal 3 (Good Health and Well-Being)** by:
+
 - 💊 Promoting responsible medication management
 - ⏰ Supporting consistent health-related routines
-- 📋 Helping individuals and caregivers become more organized in monitoring medication intake
+- 📋 Helping individuals and caregivers monitor medication intake
+
 ---
 
 <h3 align="center">MEDISYNC</h3>
@@ -232,5 +236,4 @@ The accuracy of the information and records depends on the details entered by us
 
 [XML.js]: https://img.shields.io/badge/XML-005FAD?style=for-the-badge&logo=xml&logoColor=white
 [XML-url]: https://www.w3.org/XML/
-
 
