@@ -5,7 +5,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-/** Draws the animal avatars. */
+
 final class AnimalArt {
     private AnimalArt() { }
 
