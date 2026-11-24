@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/** Avatar editing widget, photo/animal picker and gallery result handling. */
+
 abstract class AvatarPicker extends PhotoStorage {
     FrameLayout avatarEdit(String avatar, final int fallback, int sizeDp, final StrCb cb) {
         final FrameLayout f = new FrameLayout(this);
