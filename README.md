@@ -120,27 +120,7 @@ MediSync applies Object-Oriented Programming principles and Java features to org
 - **Abstraction:** Abstract classes or interfaces will be used to define common behaviors for related system components—such as notification or reminder functions—while hiding internal implementation details.
 - **Exception Handling:** Exception handling will be used to manage invalid inputs, incorrect data formats, empty fields, invalid dosage or quantity values, and other runtime errors without causing the application to terminate unexpectedly.
 - **Arrays/Data Handling:** Arrays or appropriate data structures will be used to store, organize, and manage collections of medications, schedules, intake records, and other related system information.
----
 
-<h2>℞☤ Application Screenshots</h2>
-
-<p align="center">
-  <img src="assets/medisync-dashboard.png" alt="MediSync Dashboard" width="85%">
-  <br>
-  <i>Dashboard</i>
-</p>
-
-<p align="center">
-  <img src="assets/medisync-medications.png" alt="Medication Management Interface" width="85%">
-  <br>
-  <i>Medication Management</i>
-</p>
-
-<p align="center">
-  <img src="assets/medisync-schedule.png" alt="Medication Schedule Interface" width="85%">
-  <br>
-  <i>Medication Scheduling</i>
-</p>
 
 ---
 
