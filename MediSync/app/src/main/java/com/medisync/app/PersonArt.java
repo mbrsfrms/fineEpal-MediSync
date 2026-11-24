@@ -5,7 +5,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-/** Draws the person avatars. */
 final class PersonArt {
     private PersonArt() { }
 
