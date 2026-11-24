@@ -6,7 +6,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.view.View;
 
-/** Simple progress bar. */
+
 class BarView extends View {
     final float frac;
     final int color, track;
