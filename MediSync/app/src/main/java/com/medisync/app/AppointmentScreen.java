@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-/** Appointment list, add/edit form, and the detail actions (complete, cancel, reopen, delete). */
+
 final class AppointmentScreen {
     private AppointmentScreen() { }
 
