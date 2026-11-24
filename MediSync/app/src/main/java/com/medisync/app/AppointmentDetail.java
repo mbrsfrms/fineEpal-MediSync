@@ -12,7 +12,6 @@ import com.medisync.app.util.DateUtils;
 final class AppointmentDetail {
     private AppointmentDetail() { }
 
-    /** Detail dialog with the actions allowed for the appointment's current status. */
     static void showDetail(final MainActivity host, final Appointment a) {
         final MediSyncDatabase db = host.db;
         final android.app.AlertDialog[] dd = new android.app.AlertDialog[1];
@@ -68,7 +67,7 @@ final class AppointmentDetail {
     }
 
     static void action(MainActivity host, LinearLayout body, String label, int color, Runnable r,
-                               final android.app.AlertDialog[] dd) {
+                       final android.app.AlertDialog[] dd) {
         TextView t = host.tv(label, 13, color, false);
         t.setPadding(host.dp(2), host.dp(10), 0, host.dp(10));
         t.setGravity(Gravity.START);
