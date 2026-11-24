@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.medisync.app.model.*;
 
-/** Forward declarations so each layer can call screens defined in later layers. */
+
 abstract class AppHooks extends AppState {
     abstract int dp(float v);
     abstract GradientDrawable rr(int fill, int stroke, float r);
