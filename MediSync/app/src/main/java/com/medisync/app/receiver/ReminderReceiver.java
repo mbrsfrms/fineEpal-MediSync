@@ -14,10 +14,6 @@ import com.medisync.app.model.Patient;
 import com.medisync.app.util.DateUtils;
 import com.medisync.app.util.Keys;
 
-/**
- * Handles alarms and notification actions: a dose is due, the "Mark taken" action was tapped,
- * or an appointment is coming up. A dose alarm re-arms itself for the next day after it fires.
- */
 public class ReminderReceiver extends BroadcastReceiver {
     public static final String ACTION_TAKEN = "com.medisync.app.action.TAKEN";
 
