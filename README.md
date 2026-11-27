@@ -237,15 +237,15 @@ MediSync/
 ├── settings.gradle
 │
 ├── assets/
-│   ├── add_medication.jpg.jpeg
+│   ├── add_medication.jpg
 │   ├── amber.jpg
-│   ├── appointment.jpg.jpeg
-│   ├── calendar_and_reminders.jpg.jpeg
-│   ├── dependent.jpg.jpeg
-│   ├── home_dashboard.jpg.jpeg
-│   ├── login_screen.jpg.jpeg
-│   ├── medication_history.jpg.jpeg
-│   ├── medication_list.jpg.jpeg
+│   ├── appointment.jpg
+│   ├── calendar_and_reminders.jpg
+│   ├── dependent.jpg
+│   ├── home_dashboard.jpg
+│   ├── login_screen.jpg
+│   ├── medication_history.jpg
+│   ├── medication_list.jpg
 │   ├── medisync-banner.jpg
 │   ├── seanjerseyalbo.png
 │   └── sharmilaroa.jpg
