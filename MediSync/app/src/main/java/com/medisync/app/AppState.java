@@ -10,7 +10,7 @@ import com.medisync.app.manager.AuthManager;
 import com.medisync.app.model.*;
 import java.util.ArrayList;
 
-
+/** Shared state, palette, constants and callback types for the whole app UI. */
 abstract class AppState extends Activity {
     int TEAL = 0xFF1A9FA3, MINT = 0xFFE4F6F4, BG = 0xFFF1FAFA, CARD = 0xFFFFFFFF,
             INK = 0xFF173B55, MUTED = 0xFF6D8797, BORDER = 0xFFD5E9ED, HINT = 0xFF9DB0BA;
@@ -67,6 +67,11 @@ abstract class AppState extends Activity {
     boolean googleSession = false; // true when the open session came from Google/Firebase, false for email/password
 
     FirebaseAuth.AuthStateListener authListener;
+
+    // Sign-up e-mail verification (held in memory only until the code is confirmed)
+    String pendingName = "", pendingEmail = "", pendingPassword = "";
+    long resendAt = 0;
+    boolean sendingCode = false, verifyingCode = false;
 
     StrCb pendingPhotoCb;
 

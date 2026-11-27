@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-abstract class 2PhotoStorage extends DoseLogic {
+abstract class PhotoStorage extends DoseLogic {
     /** Copies the chosen picture into the app's private storage as a small square JPEG. */
     String savePhoto(Uri uri) {
         try {

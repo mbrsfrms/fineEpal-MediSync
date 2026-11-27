@@ -7,8 +7,10 @@ import android.net.NetworkCapabilities;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseUser;
 
-abstract class GoogleSignInBase {
+/** Google sign-in result types and environment checks. */
+public abstract class GoogleSignInBase {
     public enum Failure {
+        /** The user closed the account picker. Not an error. */
         CANCELLED,
         NO_ACCOUNT,
         NETWORK,
@@ -25,8 +27,11 @@ abstract class GoogleSignInBase {
     }
 
     public enum SessionState {
+        /** Firebase confirmed the account and token are still good. */
         VALID,
+        /** The account was deleted or disabled, or its refresh token was revoked or expired. */
         REVOKED,
+        /** Could not reach Firebase; keep the existing session and work offline. */
         UNKNOWN
     }
 
@@ -38,6 +43,7 @@ abstract class GoogleSignInBase {
         return !FirebaseApp.getApps(ctx).isEmpty();
     }
 
+    /** Returns null when Firebase and Google sign-in are configured, otherwise a message that says what is missing. */
     public static String configurationProblem(Context ctx) {
         if (FirebaseApp.getApps(ctx).isEmpty()) {
             return "Firebase is not set up in this build. Add google-services.json to the app folder (see FIREBASE_SETUP.md) and rebuild.";
@@ -48,6 +54,7 @@ abstract class GoogleSignInBase {
         return null;
     }
 
+    /** The web client ID that the google-services plugin generates, or null if the JSON has no web OAuth client. */
     static String webClientId(Context ctx) {
         int id = ctx.getResources().getIdentifier("default_web_client_id", "string", ctx.getPackageName());
         if (id == 0) return null;
@@ -58,7 +65,7 @@ abstract class GoogleSignInBase {
     public static boolean isOnline(Context ctx) {
         try {
             ConnectivityManager cm = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-            if (cm == null) return true;
+            if (cm == null) return true; // cannot tell; let the real request decide
             Network n = cm.getActiveNetwork();
             if (n == null) return false;
             NetworkCapabilities caps = cm.getNetworkCapabilities(n);

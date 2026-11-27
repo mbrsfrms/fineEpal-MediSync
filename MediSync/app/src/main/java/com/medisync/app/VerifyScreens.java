@@ -1,108 +1,110 @@
 package com.medisync.app;
 
-import android.app.DatePickerDialog;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.text.InputType;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
-import android.widget.EditText;
+import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
-import java.util.Calendar;
+import com.medisync.app.auth.EmailVerifier;
+import com.medisync.app.auth.GoogleSignIn;
+import com.medisync.app.manager.AuthManager;
 import java.util.Locale;
-abstract class UiInputs extends UiBasics {
-    TextView lbl(LinearLayout p, String s) {
-        TextView t = tv(s, 11, MUTED, false);
-        t.setPadding(dp(2), dp(4), 0, dp(4));
-        p.addView(t);
-        return t;
+
+/** E-mail verification step of sign-up (verify screen and account creation). */
+abstract class VerifyScreens extends GoogleAuthUi {
+    void clearPending() {
+        pendingName = "";
+        pendingEmail = "";
+        pendingPassword = "";
     }
 
-    EditText input(LinearLayout parent, String hint, String icon, boolean pw) {
-        LinearLayout box = row();
-        box.setBackground(rr(CARD, BORDER, 10));
-        box.setPadding(dp(12), 0, dp(12), 0);
-        if (icon != null) box.addView(new IconView(this, icon, MUTED), lp(22, 22));
-        final EditText e = new EditText(this);
-        e.setHint(hint);
-        e.setHintTextColor(HINT);
-        e.setTextColor(INK);
-        e.setTextSize(15);
-        e.setSingleLine(true);
-        e.setBackground(null);
-        e.setPadding(dp(icon != null ? 10 : 2), 0, dp(4), 0);
-        box.addView(e, new LinearLayout.LayoutParams(0, -1, 1));
-        if (pw) {
-            e.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-            final IconView eye = new IconView(this, "eye", MUTED);
-            final boolean[] shown = {false};
-            eye.setOnClickListener(x -> {
-                shown[0] = !shown[0];
-                e.setTransformationMethod(shown[0] ? HideReturnsTransformationMethod.getInstance() : PasswordTransformationMethod.getInstance());
-                e.setSelection(e.getText().length());
-                eye.set(shown[0] ? "eyeoff" : "eye", MUTED);
-            });
-            box.addView(eye, lp(22, 22));
+    /** Creates the temporary Firebase user and sends the verification e-mail, then opens the verify screen. */
+    void startEmailVerification(final String name, String email, final String password, final TextView emMsg) {
+        if (!GoogleSignIn.isOnline(this)) {
+            showMsg(emMsg, "No internet connection. Connect to Wi-Fi or mobile data, then try again.", RED);
+            return;
         }
-        LinearLayout.LayoutParams p = lp(-1, 52);
-        p.bottomMargin = dp(10);
-        parent.addView(box, p);
-        return e;
-    }
-
-    Sel select(LinearLayout parent, String hint, final String[] opts, String initial) {
-        final Sel s = new Sel();
-        s.v = initial == null ? "" : initial;
-        LinearLayout box = row();
-        box.setBackground(rr(CARD, BORDER, 10));
-        box.setPadding(dp(12), 0, dp(12), 0);
-        s.t = tv(s.v.isEmpty() ? hint : s.v, 13, s.v.isEmpty() ? HINT : INK, false);
-        box.addView(s.t, wt(1));
-        box.addView(new IconView(this, "down", MUTED), lp(19, 19));
-        box.setOnClickListener(x -> listDialog(hint, opts, i -> {
-            s.v = opts[i];
-            s.t.setText(s.v);
-            s.t.setTextColor(INK);
-        }));
-        LinearLayout.LayoutParams p = lp(-1, 52);
-        p.bottomMargin = dp(10);
-        parent.addView(box, p);
-        return s;
-    }
-
-    Sel dateSelect(LinearLayout parent, String hint, String initial) {
-        final Sel s = new Sel();
-        s.v = initial == null ? "" : initial;
-        LinearLayout box = row();
-        box.setBackground(rr(CARD, BORDER, 10));
-        box.setPadding(dp(12), 0, dp(12), 0);
-        s.t = tv(s.v.isEmpty() ? hint : fmtDate(s.v), 13, s.v.isEmpty() ? HINT : INK, false);
-        box.addView(s.t, wt(1));
-        box.addView(new IconView(this, "down", MUTED), lp(19, 19));
-        box.setOnClickListener(x -> {
-            Calendar c = Calendar.getInstance();
-            DatePickerDialog d = new DatePickerDialog(this, (pk, y, m, dd) -> {
-                s.v = String.format(Locale.US, "%04d-%02d-%02d", y, m + 1, dd);
-                s.t.setText(fmtDate(s.v));
-                s.t.setTextColor(INK);
-            }, c.get(Calendar.YEAR) - 8, c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
-            d.getDatePicker().setMaxDate(System.currentTimeMillis());
-            d.show();
+        final String normalized = email.trim().toLowerCase(Locale.US);
+        sendingCode = true;
+        toast("Sending verification email\u2026");
+        EmailVerifier.start(this, normalized, password, f -> {
+            sendingCode = false;
+            if (dead()) return;
+            if (f != null) {
+                showMsg(emMsg, EmailVerifier.describe(f), RED);
+                return;
+            }
+            pendingName = name;
+            pendingEmail = normalized;
+            pendingPassword = password;
+            resendAt = System.currentTimeMillis() + 60_000;
+            go("verify");
         });
-        LinearLayout.LayoutParams p = lp(-1, 52);
-        p.bottomMargin = dp(10);
-        parent.addView(box, p);
-        return s;
     }
 
-    Switch sw(boolean on) {
-        Switch s = new Switch(this);
-        s.setChecked(on);
-        int[][] st = new int[][]{new int[]{android.R.attr.state_checked}, new int[]{}};
-        s.setThumbTintList(new ColorStateList(st, new int[]{Color.WHITE, Color.WHITE}));
-        s.setTrackTintList(new ColorStateList(st, new int[]{TEAL, 0xFFB8C7CF}));
-        return s;
+    void verifyEmail() {
+        if (pendingEmail.isEmpty()) { // nothing to verify (e.g. the app was restarted): back to the start
+            stack.clear();
+            cur = "login";
+            login();
+            return;
+        }
+        LinearLayout b = wavePage();
+        b.addView(new View(this), lp(1, 10));
+        b.addView(tv("Verify Your Email", 22, INK, true));
+        TextView s = tv("We sent a verification link to " + pendingEmail + ". Open the email, tap the link, then come back "
+                + "here and tap the button below. Check your spam folder too.", 13, MUTED, false);
+        s.setPadding(0, dp(4), 0, dp(18));
+        b.addView(s);
+        final TextView msg = errView(b);
+        btn(b, "I've verified my email", () -> {
+            if (verifyingCode) return;
+            if (!GoogleSignIn.isOnline(this)) {
+                showMsg(msg, "No internet connection. Connect to Wi-Fi or mobile data, then try again.", RED);
+                return;
+            }
+            showMsg(msg, null, 0);
+            verifyingCode = true;
+            EmailVerifier.check(this, f -> {
+                verifyingCode = false;
+                if (dead()) return;
+                if (f != null) { showMsg(msg, EmailVerifier.describe(f), RED); return; }
+                createVerifiedAccount();
+            });
+        });
+        sp(b, 4);
+        linkRow(b, "Didn't get the email?", "Resend", () -> {
+            long wait = (resendAt - System.currentTimeMillis() + 999) / 1000;
+            if (wait > 0) { toast("Please wait " + wait + " seconds before requesting another email."); return; }
+            if (sendingCode) return;
+            sendingCode = true;
+            EmailVerifier.resend(this, f -> {
+                sendingCode = false;
+                if (dead()) return;
+                if (f != null) { showMsg(msg, EmailVerifier.describe(f), RED); return; }
+                resendAt = System.currentTimeMillis() + 60_000;
+                showMsg(msg, "A new email was sent. Check your inbox (and spam folder).", GREEN);
+            });
+        });
+        linkRow(b, "Wrong email?", "Go back", () -> { EmailVerifier.cancel(this); clearPending(); back(); });
+    }
+
+    /** The link was confirmed, so the email belongs to this person: now create the account. */
+    void createVerifiedAccount() {
+        AuthManager.Result r = auth.register(pendingName, pendingEmail, pendingPassword, pendingPassword);
+        clearPending();
+        EmailVerifier.finish(this); // drop the temporary Firebase session
+        switch (r.outcome) {
+            case SUCCESS:
+                toast("Email verified. Account created!");
+                googleSession = false;
+                startSession(r.user);
+                break;
+            case EMAIL_ALREADY_REGISTERED:
+                toast("This email is already registered. Please log in instead.");
+                tab("login");
+                break;
+            default:
+                toast("Could not create the account. Please try again.");
+                tab("signup");
+        }
     }
 }

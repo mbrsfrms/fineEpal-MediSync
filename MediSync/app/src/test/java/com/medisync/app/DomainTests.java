@@ -1,7 +1,6 @@
 package com.medisync.app;
 
 import com.medisync.app.manager.AccountStore;
-import com.medisync.app.manager.AuthManager;
 import com.medisync.app.manager.CalendarBuilder;
 import com.medisync.app.manager.HealthAlertService;
 import com.medisync.app.manager.ReminderService;
@@ -17,9 +16,9 @@ import com.medisync.app.model.MedicationSchedule;
 import com.medisync.app.model.Patient;
 import com.medisync.app.model.Reminder;
 import com.medisync.app.util.DateUtils;
-
-import java.util.ArrayList;
+import com.medisync.app.manager.AuthManager;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -104,6 +103,16 @@ public final class DomainTests {
         }
         void legacy(long id, String name, String email) { rows.put(id, new StoredAccount(id, "", name, email, "")); next = Math.max(next, id + 1); }
         void rename(long id, String name) { StoredAccount a = rows.get(id); rows.put(id, new StoredAccount(a.id, a.uid, name, a.email, a.avatar)); }
+        public long insertWithPassword(String name, String email, String passwordHash) {
+            if (findByEmail(email) != null) return -1; // UNIQUE email
+            long id = next++;
+            rows.put(id, new StoredAccount(id, "", name, email, "", passwordHash));
+            return id;
+        }
+        public void updatePasswordHash(long id, String passwordHash) {
+            StoredAccount a = rows.get(id);
+            if (a != null) rows.put(id, new StoredAccount(a.id, a.uid, a.name, a.email, a.avatar, passwordHash));
+        }
     }
 
     static AuthManager.GoogleIdentity gid(String uid, String email, boolean verified, String name) {

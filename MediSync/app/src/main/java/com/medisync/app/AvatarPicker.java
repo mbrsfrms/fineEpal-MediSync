@@ -2,6 +2,10 @@ package com.medisync.app;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.Settings;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.view.Gravity;
@@ -9,7 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
+/** Avatar editing widget, photo/animal picker and gallery result handling. */
 abstract class AvatarPicker extends PhotoStorage {
     FrameLayout avatarEdit(String avatar, final int fallback, int sizeDp, final StrCb cb) {
         final FrameLayout f = new FrameLayout(this);
@@ -77,8 +81,32 @@ abstract class AvatarPicker extends PhotoStorage {
         dd[0] = dialog("Profile photo", body, null, null, "Cancel");
     }
 
+    static final int REQ_PHOTO_PERM = 42;
+
+    /** Permission(s) asked before the gallery opens. Android 14 also offers "select photos" (partial access). */
+    String[] photoPermissions() {
+        if (Build.VERSION.SDK_INT >= 34) {
+            return new String[]{"android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"};
+        }
+        if (Build.VERSION.SDK_INT >= 33) return new String[]{"android.permission.READ_MEDIA_IMAGES"};
+        return new String[]{"android.permission.READ_EXTERNAL_STORAGE"};
+    }
+
+    boolean hasPhotoAccess() {
+        for (String p : photoPermissions()) {
+            if (checkSelfPermission(p) == PackageManager.PERMISSION_GRANTED) return true; // any one is enough
+        }
+        return false;
+    }
+
+    /** Asks for photo access first (if not already allowed), then opens the gallery. */
     void openGallery(StrCb cb) {
         pendingPhotoCb = cb;
+        if (hasPhotoAccess()) { launchGallery(); return; }
+        requestPermissions(photoPermissions(), REQ_PHOTO_PERM);
+    }
+
+    void launchGallery() {
         try {
             Intent i = new Intent(Intent.ACTION_GET_CONTENT);
             i.setType("image/*");
@@ -87,6 +115,25 @@ abstract class AvatarPicker extends PhotoStorage {
         } catch (Exception e) {
             pendingPhotoCb = null;
             toast("No gallery app available.");
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int req, String[] perms, int[] results) {
+        super.onRequestPermissionsResult(req, perms, results);
+        if (req != REQ_PHOTO_PERM) return;
+        if (hasPhotoAccess()) { launchGallery(); return; }
+        pendingPhotoCb = null;
+        if (shouldShowRequestPermissionRationale(photoPermissions()[0])) {
+            toast("Photo access is needed to choose a picture.");
+        } else { // "Don't ask again": only the phone's settings can change it now
+            dialog("Photo access needed", tv("MediSync needs permission to access your photos so you can pick a profile picture. "
+                            + "You can allow it in your phone's app settings.", 13, MUTED, false),
+                    "Open settings", () -> {
+                        startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                                Uri.fromParts("package", getPackageName(), null)));
+                        return true;
+                    }, "Cancel");
         }
     }
 

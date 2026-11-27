@@ -13,7 +13,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
-
+/** CalendarScreen */
 final class CalendarScreen {
     private CalendarScreen() { }
 
@@ -80,7 +80,7 @@ final class CalendarScreen {
         LinearLayout rowView = null;
         for (int i = 0; i < leading; i++) {
             if (cell % 7 == 0) { rowView = host.row(); grid.addView(rowView); }
-            rowView.addView(blank(host), new LinearLayout.LayoutParams(0, 0, 1));
+            rowView.addView(new View(host), new LinearLayout.LayoutParams(0, 0, 1));
             cell++;
         }
         for (int d = 1; d <= days; d++) {
@@ -90,7 +90,7 @@ final class CalendarScreen {
             cell++;
         }
         while (cell % 7 != 0) {
-            rowView.addView(blank(host), new LinearLayout.LayoutParams(0, 0, 1));
+            rowView.addView(new View(host), new LinearLayout.LayoutParams(0, 0, 1));
             cell++;
         }
 
@@ -119,14 +119,6 @@ final class CalendarScreen {
         } else {
             for (CalendarEvent e : dayEvents) list.addView(CalendarCells.eventRow(host, e));
         }
-    }
-
-    /**
-     * Empty cell before the 1st / after the last day. It must have an explicit height: a plain View with
-     * wrap_content grows to fill all available height, which stretched the row and pushed the other weeks off screen.
-     */
-    private static View blank(MainActivity host) {
-        return new View(host);
     }
 
     static String monthName(int month) {
