@@ -535,14 +535,14 @@ The accuracy of the information and records depends on the details entered by us
       <sub>BS Computer Science</sub>
     </td>
 
-   <td align="center" width="33%">
-      <img src="assets/amber.jpg" alt="Amber Sofia C. Ramos" width="150" height="170">
+  <td align="center" width="33%">
+      <img src="assets/amber.jpg" width="150" height="170">
       <br>
-      <b>Amber Sofia C. Ramos</b>
+      <sub><b>Amber Sofia C. Ramos</b></sub>
       <br>
       <sub>BS Computer Science</sub>
     </td>
-
+    
    <td align="center" width="33%">
       <img src="assets/sharmilaroa.jpg" alt="Sharmila C. Roa" width="150" height="170">
       <br>
