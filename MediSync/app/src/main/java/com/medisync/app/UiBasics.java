@@ -1,7 +1,6 @@
 package com.medisync.app;
 
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.view.Gravity;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.medisync.app.model.*;
+import androidx.core.content.res.ResourcesCompat;
 
 abstract class UiBasics extends FormatHelpers {
     int dp(float v) { return (int) (v * getResources().getDisplayMetrics().density + .5f); }
@@ -35,7 +35,7 @@ abstract class UiBasics extends FormatHelpers {
         t.setText(s);
         t.setTextSize(size * TS);
         t.setTextColor(color);
-        t.setTypeface(bold ? Typeface.DEFAULT_BOLD : Typeface.DEFAULT);
+        t.setTypeface(ResourcesCompat.getFont(this, bold ? R.font.poppins_bold : R.font.poppins_regular));
         return t;
     }
 
@@ -74,8 +74,7 @@ abstract class UiBasics extends FormatHelpers {
         b.setAllCaps(false);
         b.setTextSize(16);
         b.setTextColor(Color.WHITE);
-        b.setTypeface(Typeface.DEFAULT_BOLD);
-        b.setBackground(grad(12));
+        b.setTypeface(ResourcesCompat.getFont(this, R.font.poppins_bold));        b.setBackground(grad(12));
         b.setStateListAnimator(null);
         b.setOnClickListener(x -> r.run());
         LinearLayout.LayoutParams p = lp(-1, 54);

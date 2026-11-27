@@ -1,6 +1,6 @@
 <resources>
     <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
-        <item name="android:fontFamily">sans</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:colorAccent">#159FA3</item>
         <item name="android:statusBarColor">#F3FAFA</item>
         <item name="android:navigationBarColor">#FFFFFF</item>
