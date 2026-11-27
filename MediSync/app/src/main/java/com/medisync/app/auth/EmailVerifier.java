@@ -16,7 +16,7 @@ public final class EmailVerifier {
     private EmailVerifier() { }
 
     public enum Failure { NETWORK, NOT_VERIFIED, EMAIL_IN_USE, TOO_MANY, SIGN_IN_DISABLED, NOT_CONFIGURED, OTHER }
-
+    
     public interface Callback { void onResult(Failure failure); }
 
     /** Creates the Firebase user and sends the verification e-mail. */
