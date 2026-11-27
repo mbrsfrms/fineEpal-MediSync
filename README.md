@@ -530,7 +530,7 @@ The accuracy of the information and records depends on the details entered by us
     <td align="center" width="33%">
       <img src="assets/seanjerseyalbo.png" alt="Sean Jersey A. Albo" width="150" height="170">
       <br>
-      <b>Sean Jersey A. Albo</b>
+     <sub><b>Sean Jersey A. Albo</b></sub>
       <br>
       <sub>BS Computer Science</sub>
     </td>
@@ -546,7 +546,7 @@ The accuracy of the information and records depends on the details entered by us
    <td align="center" width="33%">
       <img src="assets/sharmilaroa.jpg" alt="Sharmila C. Roa" width="150" height="170">
       <br>
-      <b>Sharmila C. Roa</b>
+     <sub><b>Sharmila C. Roa</b></sub>
       <br>
       <sub>BS Computer Science</sub>
     </td>
@@ -567,7 +567,7 @@ The accuracy of the information and records depends on the details entered by us
 
 The development of MediSync would not have been possible without the guidance, support, and encouragement of the people who contributed to this project.
 
-We would like to express our sincere gratitude to our instructor for providing valuable guidance, knowledge, and feedback throughout the development process.
+We would like to express our sincere gratitude to our instructor, Ms. Fatima Marie P. Agdon, for providing valuable guidance, knowledge, and feedback throughout the development process.
 
 We also extend our appreciation to our university, classmates, and everyone who supported us in completing this project.
 
