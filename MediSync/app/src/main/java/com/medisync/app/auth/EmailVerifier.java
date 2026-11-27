@@ -11,11 +11,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 
-/**
- * E-mail ownership check for sign-up, using Firebase's free built-in verification e-mail (a link the user taps).
- * The Firebase user created here exists only to send and check that link; the app signs it out as soon as the
- * check is finished, and the real MediSync account is created locally afterwards.
- */
+/** E-mail ownership check for sign-up */
 public final class EmailVerifier {
     private EmailVerifier() { }
 
@@ -24,7 +20,7 @@ public final class EmailVerifier {
     /** failure == null means success. */
     public interface Callback { void onResult(Failure failure); }
 
-    /** Creates the Firebase user (or resumes an unfinished one) and sends the verification e-mail. */
+    /** Creates the Firebase user and sends the verification e-mail. */
     public static void start(Context ctx, String email, String password, Callback cb) {
         if (FirebaseApp.getApps(ctx).isEmpty()) { cb.onResult(Failure.NOT_CONFIGURED); return; }
         final FirebaseAuth fa = FirebaseAuth.getInstance();
@@ -36,7 +32,6 @@ public final class EmailVerifier {
         });
     }
 
-    /** The e-mail was started earlier but never confirmed (for example the app was closed): sign in and continue. */
     private static void resume(FirebaseAuth fa, String email, String password, Callback cb) {
         fa.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (!task.isSuccessful()) {
@@ -73,13 +68,12 @@ public final class EmailVerifier {
         });
     }
 
-    /** Verification finished: drop the temporary Firebase session so it is never mistaken for a Google sign-in. */
+    /** Verification finished. */
     public static void finish(Context ctx) {
         if (FirebaseApp.getApps(ctx).isEmpty()) return;
         FirebaseAuth.getInstance().signOut();
     }
 
-    /** The user backed out: remove the unconfirmed Firebase user so the e-mail is not left reserved, then sign out. */
     public static void cancel(Context ctx) {
         if (FirebaseApp.getApps(ctx).isEmpty()) return;
         final FirebaseAuth fa = FirebaseAuth.getInstance();

@@ -28,9 +28,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.UserInfo;
 
-/** Credential Manager sign-in flow and failure classification. */
 public abstract class GoogleSignInFlow extends GoogleSignInBase {
-    /** Opens the Google account chooser and signs the chosen account in to Firebase. Callbacks run on the main thread. */
+
     public static void start(final Activity activity, final SignInCallback cb) {
         if (configurationProblem(activity) != null) { cb.onFailure(Failure.NOT_CONFIGURED); return; }
         final CredentialManager manager;
@@ -65,7 +64,6 @@ public abstract class GoogleSignInFlow extends GoogleSignInBase {
                         }
                     });
         } catch (RuntimeException e) {
-            // Some devices/providers throw synchronously before invoking the async callback.
             cb.onFailure(Failure.PROVIDER_UNAVAILABLE);
         }
     }
