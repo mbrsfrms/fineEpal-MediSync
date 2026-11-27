@@ -17,7 +17,7 @@
 
 ---
 
-#<h2>℞☤ Overview </h2>
+<h2>℞☤ Overview </h2>
 
 **MediSync** is a Java-based medication monitoring and management application designed to provide users with a centralized and organized platform for managing their medication needs. It aims to simplify keeping track of multiple medications by allowing users to:
 - 📝 **Record** essential medication information
@@ -74,145 +74,144 @@
 - [![XML][XML.js]][XML-url]
 ---
 
-<h2>℞☤ Project Structure</h2>
+## ℞☤ Project Structure
 
 ```text
 MediSync/
 │
 ├── app/
-│   └── src/
-│       ├── main/
-│       │   ├── java/
-│       │   │   └── com/
-│       │   │       └── medisync/
-│       │   │           └── app/
-│       │   │               ├── auth/
-│       │   │               │   ├── EmailVerifier.java
-│       │   │               │   ├── GoogleSignIn.java
-│       │   │               │   ├── GoogleSignInBase.java
-│       │   │               │   └── GoogleSignInFlow.java
-│       │   │               │
-│       │   │               ├── database/
-│       │   │               │   ├── DbAccounts.java
-│       │   │               │   ├── DbAppointments.java
-│       │   │               │   ├── DbCore.java
-│       │   │               │   ├── DbDoses.java
-│       │   │               │   ├── DbMeds.java
-│       │   │               │   ├── DbPatients.java
-│       │   │               │   └── MediSyncDatabase.java
-│       │   │               │
-│       │   │               ├── manager/
-│       │   │               │   ├── AccountStore.java
-│       │   │               │   ├── AlarmScheduler.java
-│       │   │               │   ├── AuthManager.java
-│       │   │               │   ├── CalendarBuilder.java
-│       │   │               │   ├── HealthAlertService.java
-│       │   │               │   ├── NotificationHelper.java
-│       │   │               │   ├── PasswordHasher.java
-│       │   │               │   ├── ReminderService.java
-│       │   │               │   ├── StreakCalculator.java
-│       │   │               │   └── Validator.java
-│       │   │               │
-│       │   │               ├── model/
-│       │   │               │   ├── Appointment.java
-│       │   │               │   ├── AppointmentReminder.java
-│       │   │               │   ├── CalendarEvent.java
-│       │   │               │   ├── HealthAlert.java
-│       │   │               │   ├── IntakeRecord.java
-│       │   │               │   ├── IntakeStatus.java
-│       │   │               │   ├── Medication.java
-│       │   │               │   ├── MedicationReminder.java
-│       │   │               │   ├── MedicationSchedule.java
-│       │   │               │   ├── Patient.java
-│       │   │               │   ├── Person.java
-│       │   │               │   ├── Reminder.java
-│       │   │               │   ├── RestockReminder.java
-│       │   │               │   └── User.java
-│       │   │               │
-│       │   │               ├── receiver/
-│       │   │               │   ├── BootReceiver.java
-│       │   │               │   └── ReminderReceiver.java
-│       │   │               │
-│       │   │               ├── util/
-│       │   │               │   ├── DateUtils.java
-│       │   │               │   └── Keys.java
-│       │   │               │
-│       │   │               ├── AccountScreens.java
-│       │   │               ├── AnimalArt.java
-│       │   │               ├── AppHooks.java
-│       │   │               ├── AppState.java
-│       │   │               ├── AppointmentDetail.java
-│       │   │               ├── AppointmentScreen.java
-│       │   │               ├── AvatarPicker.java
-│       │   │               ├── AvatarView.java
-│       │   │               ├── BarView.java
-│       │   │               ├── CalendarCells.java
-│       │   │               ├── CalendarScreen.java
-│       │   │               ├── DependentScreens.java
-│       │   │               ├── DoseLogic.java
-│       │   │               ├── FlameView.java
-│       │   │               ├── FormHelpers.java
-│       │   │               ├── FormatHelpers.java
-│       │   │               ├── GoogleAuthFlow.java
-│       │   │               ├── GoogleAuthUi.java
-│       │   │               ├── HelpScreens.java
-│       │   │               ├── HistoryScreen.java
-│       │   │               ├── HomeAlerts.java
-│       │   │               ├── HomeScreen.java
-│       │   │               ├── HomeStreak.java
-│       │   │               ├── IconView.java
-│       │   │               ├── LoginScreens.java
-│       │   │               ├── LogoView.java
-│       │   │               ├── MainActivity.java
-│       │   │               ├── MedFormFields.java
-│       │   │               ├── MedFormSave.java
-│       │   │               ├── MedFormState.java
-│       │   │               ├── MedListScreen.java
-│       │   │               ├── MoreScreen.java
-│       │   │               ├── Navigation.java
-│       │   │               ├── OnboardingScreens.java
-│       │   │               ├── PatientScreen.java
-│       │   │               ├── PersonArt.java
-│       │   │               ├── PhotoStorage.java
-│       │   │               ├── ReminderSettings.java
-│       │   │               ├── SessionRestore.java
-│       │   │               ├── SplashScreen.java
-│       │   │               ├── StreakAboutScreens.java
-│       │   │               ├── UiBasics.java
-│       │   │               ├── UiDialogs.java
-│       │   │               ├── UiInputs.java
-│       │   │               ├── VerifyScreens.java
-│       │   │               └── WaveView.java
-│       │   │
-│       │   ├── res/
-│       │   │   ├── drawable/
-│       │   │   │   ├── ic_google_logo.xml
-│       │   │   │   └── ic_launcher_foreground.xml
-│       │   │   │
-│       │   │   ├── layout/
-│       │   │   │   └── activity_main.xml
-│       │   │   │
-│       │   │   ├── mipmap-anydpi-v26/
-│       │   │   │   ├── ic_launcher.xml
-│       │   │   │   └── ic_launcher_round.xml
-│       │   │   │
-│       │   │   ├── mipmap-mdpi/
-│       │   │   │   ├── ic_launcher.xml
-│       │   │   │   └── ic_launcher_round.xml
-│       │   │   │
-│       │   │   └── values/
-│       │   │       ├── ic_launcher_background.xml
-│       │   │       ├── strings.xml
-│       │   │       └── styles.xml
-│       │   │
-│       │   └── AndroidManifest.xml
-│       │
-│       └── test/
-│           └── java/
-│               └── com/
-│                   └── medisync/
-│                       └── app/
-│                           └── DomainTests.java
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── medisync/
+│   │   │   │           └── app/
+│   │   │   │               ├── auth/
+│   │   │   │               │   ├── EmailVerifier.java
+│   │   │   │               │   ├── GoogleSignIn.java
+│   │   │   │               │   ├── GoogleSignInBase.java
+│   │   │   │               │   └── GoogleSignInFlow.java
+│   │   │   │               │
+│   │   │   │               ├── database/
+│   │   │   │               │   ├── DbAccounts.java
+│   │   │   │               │   ├── DbAppointments.java
+│   │   │   │               │   ├── DbCore.java
+│   │   │   │               │   ├── DbDoses.java
+│   │   │   │               │   ├── DbMeds.java
+│   │   │   │               │   ├── DbPatients.java
+│   │   │   │               │   └── MediSyncDatabase.java
+│   │   │   │               │
+│   │   │   │               ├── manager/
+│   │   │   │               │   ├── AccountStore.java
+│   │   │   │               │   ├── AlarmScheduler.java
+│   │   │   │               │   ├── AuthManager.java
+│   │   │   │               │   ├── CalendarBuilder.java
+│   │   │   │               │   ├── HealthAlertService.java
+│   │   │   │               │   ├── NotificationHelper.java
+│   │   │   │               │   ├── PasswordHasher.java
+│   │   │   │               │   ├── ReminderService.java
+│   │   │   │               │   ├── StreakCalculator.java
+│   │   │   │               │   └── Validator.java
+│   │   │   │               │
+│   │   │   │               ├── model/
+│   │   │   │               │   ├── Appointment.java
+│   │   │   │               │   ├── AppointmentReminder.java
+│   │   │   │               │   ├── CalendarEvent.java
+│   │   │   │               │   ├── HealthAlert.java
+│   │   │   │               │   ├── IntakeRecord.java
+│   │   │   │               │   ├── IntakeStatus.java
+│   │   │   │               │   ├── Medication.java
+│   │   │   │               │   ├── MedicationReminder.java
+│   │   │   │               │   ├── MedicationSchedule.java
+│   │   │   │               │   ├── Patient.java
+│   │   │   │               │   ├── Person.java
+│   │   │   │               │   ├── Reminder.java
+│   │   │   │               │   ├── RestockReminder.java
+│   │   │   │               │   └── User.java
+│   │   │   │               │
+│   │   │   │               ├── receiver/
+│   │   │   │               │   ├── BootReceiver.java
+│   │   │   │               │   └── ReminderReceiver.java
+│   │   │   │               │
+│   │   │   │               └── util/
+│   │   │   │                   ├── AccountScreens.java
+│   │   │   │                   ├── AnimalArt.java
+│   │   │   │                   ├── AppHooks.java
+│   │   │   │                   ├── AppState.java
+│   │   │   │                   ├── AppointmentDetail.java
+│   │   │   │                   ├── AppointmentScreen.java
+│   │   │   │                   ├── AvatarPicker.java
+│   │   │   │                   ├── AvatarView.java
+│   │   │   │                   ├── BarView.java
+│   │   │   │                   ├── CalendarCells.java
+│   │   │   │                   ├── CalendarScreen.java
+│   │   │   │                   ├── DependentScreens.java
+│   │   │   │                   ├── DoseLogic.java
+│   │   │   │                   ├── FlameView.java
+│   │   │   │                   ├── FormHelpers.java
+│   │   │   │                   ├── FormatHelpers.java
+│   │   │   │                   ├── GoogleAuthFlow.java
+│   │   │   │                   ├── GoogleAuthUi.java
+│   │   │   │                   ├── HelpScreens.java
+│   │   │   │                   ├── HistoryScreen.java
+│   │   │   │                   ├── HomeAlerts.java
+│   │   │   │                   ├── HomeScreen.java
+│   │   │   │                   ├── HomeStreak.java
+│   │   │   │                   ├── IconView.java
+│   │   │   │                   ├── LoginScreens.java
+│   │   │   │                   ├── LogoView.java
+│   │   │   │                   ├── MainActivity.java
+│   │   │   │                   ├── MedFormFields.java
+│   │   │   │                   ├── MedFormSave.java
+│   │   │   │                   ├── MedFormState.java
+│   │   │   │                   ├── MedListScreen.java
+│   │   │   │                   ├── MoreScreen.java
+│   │   │   │                   ├── Navigation.java
+│   │   │   │                   ├── OnboardingScreens.java
+│   │   │   │                   ├── PatientScreen.java
+│   │   │   │                   ├── PersonArt.java
+│   │   │   │                   ├── PhotoStorage.java
+│   │   │   │                   ├── ReminderSettings.java
+│   │   │   │                   ├── SessionRestore.java
+│   │   │   │                   ├── SplashScreen.java
+│   │   │   │                   ├── StreakAboutScreens.java
+│   │   │   │                   ├── UiBasics.java
+│   │   │   │                   ├── UiDialogs.java
+│   │   │   │                   ├── UiInputs.java
+│   │   │   │                   └── VerifyScreens.java
+│   │   │
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/
+│   │   │   │   │   ├── ic_google_logo.xml
+│   │   │   │   │   └── ic_launcher_foreground.xml
+│   │   │   │   │
+│   │   │   │   ├── layout/
+│   │   │   │   │   └── activity_main.xml
+│   │   │   │   │
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   ├── ic_launcher.xml
+│   │   │   │   │   └── ic_launcher_round.xml
+│   │   │   │   │
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── ic_launcher.xml
+│   │   │   │   │   └── ic_launcher_round.xml
+│   │   │   │   │
+│   │   │   │   └── values/
+│   │   │   │       ├── ic_launcher_background.xml
+│   │   │   │       ├── strings.xml
+│   │   │   │       └── styles.xml
+│   │   │   │
+│   │   │   └── AndroidManifest.xml
+│   │   │
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/
+│   │               └── medisync/
+│   │                   └── app/
+│   │                       └── DomainTests.java
+│   │
+│   ├── build.gradle
+│   └── google-services.json
 │
 ├── gradle/
 │   └── wrapper/
@@ -232,8 +231,8 @@ MediSync/
 ├── gradlew
 ├── gradlew.bat
 ├── settings.gradle
-├── FIREBASE_SETUP.md
 └── README.md
+
 ```
 
 <h3>℞☤ Core Classes</h3>
