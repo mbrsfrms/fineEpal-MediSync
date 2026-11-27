@@ -93,6 +93,7 @@ It aims to simplify keeping track of multiple medications by allowing users to:
 The following directory structure presents the organization of the MediSync application, including its authentication, database, manager, model, receiver, and utility components.
 
 ```text
+
 MediSync/
 │
 ├── app/
@@ -200,34 +201,29 @@ MediSync/
 │   │   │   │   ├── drawable/
 │   │   │   │   │   ├── ic_google_logo.xml
 │   │   │   │   │   └── ic_launcher_foreground.xml
-│   │   │   │   │
 │   │   │   │   ├── layout/
 │   │   │   │   │   └── activity_main.xml
-│   │   │   │   │
 │   │   │   │   ├── mipmap-anydpi-v26/
 │   │   │   │   │   ├── ic_launcher.xml
 │   │   │   │   │   └── ic_launcher_round.xml
-│   │   │   │   │
 │   │   │   │   ├── mipmap-mdpi/
 │   │   │   │   │   ├── ic_launcher.xml
-│   │   │   │   │   └── ic_launcher_round.xml
-│   │   │   │   │
-│   │   │   │   └── values/
-│   │   │   │       ├── ic_launcher_background.xml
-│   │   │   │       ├── strings.xml
-│   │   │   │       └── styles.xml
-│   │   │   │
-│   │   │   └── AndroidManifest.xml
+│   │   │   │   └── ic_launcher_round.xml
+│   │   │   └── values/
+│   │   │       ├── ic_launcher_background.xml
+│   │   │       ├── strings.xml
+│   │   │       └── styles.xml
 │   │   │
-│   │   └── test/
-│   │       └── java/
-│   │           └── com/
-│   │               └── medisync/
-│   │                   └── app/
-│   │                       └── DomainTests.java
+│   │   ├── test/
+│   │   │   └── java/
+│   │   │       └── com/
+│   │   │           └── medisync/
+│   │   │               └── app/
+│   │   │                   └── DomainTests.java
+│   │   │
+│   │   └── AndroidManifest.xml
 │   │
-│   ├── build.gradle
-│   └── google-services.json
+│   └── build.gradle
 │
 ├── gradle/
 │   └── wrapper/
@@ -236,7 +232,15 @@ MediSync/
 │       └── gradle-daemon-jvm.properties
 │
 ├── assets/
+│   ├── add_medication.jpg
 │   ├── amber.jpg
+│   ├── appointment.jpg
+│   ├── calendar_and_reminders.jpg
+│   ├── dependent.jpg
+│   ├── home_dashboard.jpg
+│   ├── login_screen.jpg
+│   ├── medication_history.jpg
+│   ├── medication_list.jpg
 │   ├── medisync-banner.jpg
 │   ├── seanjerseyalbo.png
 │   └── sharmilaroa.jpg
@@ -248,6 +252,7 @@ MediSync/
 ├── gradlew.bat
 ├── settings.gradle
 └── README.md
+
 ```
 
 ### ℞☤ Core Classes
