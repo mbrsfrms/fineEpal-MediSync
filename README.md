@@ -397,14 +397,14 @@ Explore the interface and major functionalities of MediSync through the followin
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/screenshots/login.png" alt="Login Screen" width="100%">
+      <img src="assets/login_screen.jpg" alt="Login Screen" width="100%">
       <br>
       <b>Login Screen</b>
       <br>
       <sub>Allows users to access their MediSync accounts.</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/screenshots/home.png" alt="Home Dashboard" width="100%">
+      <img src="assets/home_dashboard.jpg" alt="Home Dashboard" width="100%">
       <br>
       <b>Home Dashboard</b>
       <br>
@@ -418,14 +418,14 @@ Explore the interface and major functionalities of MediSync through the followin
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/screenshots/medication-list.png" alt="Medication List" width="100%">
+      <img src="assets/medication_list.jpg" alt="Medication List" width="100%">
       <br>
       <b>Medication List</b>
       <br>
       <sub>Displays the user's recorded medications.</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/screenshots/add-medication.png" alt="Add Medication" width="100%">
+      <img src="assets/add_medication.jpg" alt="Add Medication" width="100%">
       <br>
       <b>Add Medication</b>
       <br>
@@ -439,14 +439,14 @@ Explore the interface and major functionalities of MediSync through the followin
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/screenshots/medication-history.png" alt="Medication History" width="100%">
+      <img src="assets/medication_history.jpg" alt="Medication History" width="100%">
       <br>
       <b>Medication History</b>
       <br>
       <sub>Displays recorded medication intake and related history.</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/screenshots/calendar.png" alt="Calendar" width="100%">
+      <img src="assets/calendar_and_reminders.jpg" alt="Calendar" width="100%">
       <br>
       <b>Calendar and Reminders</b>
       <br>
@@ -460,14 +460,14 @@ Explore the interface and major functionalities of MediSync through the followin
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/screenshots/appointments.png" alt="Appointments" width="100%">
+      <img src="assets/appointment.jpg" alt="Appointments" width="100%">
       <br>
       <b>Appointment Management</b>
       <br>
       <sub>Helps users organize their medical appointments.</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/screenshots/dependents.png" alt="Dependent Management" width="100%">
+      <img src="assets/dependent.jpg" alt="Dependent Management" width="100%">
       <br>
       <b>Guardian and Dependent Management</b>
       <br>
